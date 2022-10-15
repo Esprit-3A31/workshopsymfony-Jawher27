@@ -1,0 +1,9 @@
+<a href="{{path('addStudentForm')}}">Add student</a>
+<h5>List Student</h5>
+{% for s in tabStudent %}
+    nce: {{ s.nce }}
+    username:{{ s.username }}
+    <a href="{{path('update_student',{'nce':s.nce})}}">Update</a>
+    <a href="{{path('remove_student',{'nce':s.nce})}}">Delete</a>
+    <br>
+{% endfor %}
